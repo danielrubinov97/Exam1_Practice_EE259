@@ -3,7 +3,7 @@
 
 ###### Possible fork into inheritance from scratch but with some optimizations for input files (sample_p0.h)
 
-** PROJECT 0: **
+__ PROJECT 0: __
 
 Purpose of project 0:
 	Write a C++ class definition called COUNTER which calculates the number of passing and failing grades in a list of grades.
@@ -20,5 +20,5 @@ So summary/spec of project 0 is to:
 	Read a file of student Ids and collect the student Ids in an array to use later.
 	Then create a method that uses these ids and lists them into an output file.
 
-** PROJECT 1: **
+__ PROJECT 1: __
 
