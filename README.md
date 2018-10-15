@@ -55,6 +55,6 @@
 
 #### Review for Exam 1:
 
-The following section highlights the spec of the review project in order to be prepared for exam 1. This section also combines the purposes of the first three projects into one none inherited project.
+###### The following section highlights the spec of the review project in order to be prepared for exam 1. This section also combines the purposes of the first three projects into one none inherited project.
 
 
