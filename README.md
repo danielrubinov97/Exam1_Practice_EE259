@@ -57,4 +57,18 @@
 
 ###### The following section highlights the spec of the review project in order to be prepared for exam 1. This section also combines the purposes of the first three projects into one none inherited project.
 
+##### Purpose of project exam review 1 is to:
 
+	Write a C++ class definition called SORT_EVERYTHING which will NOT inherit from any previous project. The goal is to write this code from scratch without using previous projects.
+
+##### Summary/Spec of exam review 1 is to:
+
+	Read from multiple files that hold Ids, ProjectGrades, ExamGrades and Names.
+	When requested print IDS in the order they are sorted at any moment of the script. (Using Method)
+	When requested print GRADES in the order they are sorted at any moment of the script. (Using Method)
+	When requested print Last Names OR First Names in the order they are sorted at any moment of the script (Using Method)
+	Create a method that lists the range of a specific exam of a student, also lists the range of all the test scores of that student. This also applies to project grades.
+	After creating general printing also include methods for sorting each an every array in different ways.
+	On request sorted files can be printed as they are or in reverse order.
+
+###### Am very excited to see where this project goes!
