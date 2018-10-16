@@ -16,45 +16,45 @@ class SORT_EVERYTHING {
 	
 		SORT_EVERYTHING(int, int, int); // Use case is: w.SORT_EVERYTHING(x, y, x, "ASCENDING")
 							// This is a constructor that takes in parameters of noof students, noof projects, and noof examGrades.
-		LIST_ID(int); //Job is to print ids in the ids array in which ever order they are in.
+		void LIST_ID(int); //Job is to print ids in the ids array in which ever order they are in.
 			      //The parameter is takes if the orientation of the output meaning,
 			      //to output just as in the array or in reverse order. Must check for
 			      //invalid inputs.
-		LIST_EXAMGRADES(int); //Either lists grades by exam # or by studentID.
+		void LIST_EXAMGRADES(int); //Either lists grades by exam # or by studentID.
 				      //A different method handles 
 				      //listing grades by Name (First OR LAST).
-		LIST_PROJECTGRADES(int); //Same Job as previous method, and different method handles name filter.
+		void LIST_PROJECTGRADES(int); //Same Job as previous method, and different method handles name filter.
 
-		LIST_BYNAME_EXAMGRADES(char *); //Prioritizes last name, finds if first last name 
+		void LIST_BYNAME_EXAMGRADES(char *); //Prioritizes last name, finds if first last name 
 					       //exists then checks for first name. 
 					       //Single input possible hick-up with 
 					       //first and last name inputs.
 
-		LIST_BYNAME_PROJECTGRADES(char *); //Same as previous method.
+		void LIST_BYNAME_PROJECTGRADES(char *); //Same as previous method.
 
-		EXAMGRADES_RANGE(int);//Two possible inputs, a 4 digit ID or a up to a 3 digit exam number.					 //Possible down the line issue because these grades 
+		void EXAMGRADES_RANGE(int);//Two possible inputs, a 4 digit ID or a up to a 3 digit exam number.					 //Possible down the line issue because these grades 
 				      //aren't weighed the same.
 
-		PROJECTGRADES_RANGE(int);//Same as previous method, except all projects are weighed the same.
+		void PROJECTGRADES_RANGE(int);//Same as previous method, except all projects are weighed the same.
 
-		SORT_ID(char *);//Sorts ideas by value since IDs are all 4 digit numbers.
+		void SORT_ID(char *);//Sorts ideas by value since IDs are all 4 digit numbers.
 
-		SORT_EXAMGRADES(char *);
+		void SORT_EXAMGRADES(char *);
 
-		SORT_PROJECTGRADES(char *);	
+		void SORT_PROJECTGRADES(char *);	
 
-		SORT_NAME(char *);
+		void SORT_NAME(char *);
 
-		TOTAL_GRADE(int);
+		void TOTAL_GRADE(int);
 
 	private: //Allowed due to no inheritance, once heritance is required change to protected.
 
 		int students = 100, exams = 20, projects = 20;
-		int ids[students], examGrades[students][exams], projectGrades[students][projects];
+		int ids[100], examGrades[100][20], projectGrades[100][20];
 		
-		char LastName[students][12]; //12 Character cap for last name.
-		char FirstName[students][12];
-}
+		char LastName[100][12]; //12 Character cap for last name.
+		char FirstName[100][12];
+};
 
 SORT_EVERYTHING::SORT_EVERYTHING(int x, int y, int z){
 	
@@ -69,12 +69,12 @@ SORT_EVERYTHING::SORT_EVERYTHING(int x, int y, int z){
 		}
 		for(i=0; i < x; i++){
 			for(j = 0; j < y; j++){	
-				input_file_projects >> grades[i][j];
+				input_file_projects >> projectGrades[i][j];
 			}
 		}
 		for(i = 0; i < x; i++){
 			for(j = 0; j < z; j++){
-				input_file_projects >> grades[i][j];
+				input_file_projects >> examGrades[i][j];
 			}
 		}
 		for(i = 0; i < x; i++){
