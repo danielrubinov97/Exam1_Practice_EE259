@@ -8,7 +8,7 @@ ifstream input_file_ids("studentId.txt", ios::in);
 ifstream input_file_projects("studentProjectGrades.txt", ios::in);
 ifstream input_file_examGrades("studentExamGrades.txt", ios::in);
 ifstream input_file_names("studentNames.txt", ios::in);
-ofstream out_file_pEP1("out.txt", ios::out);
+ofstream output_file_pEP1("out.txt", ios::out);
 
 class SORT_EVERYTHING {
 	public:  //Allows for future inheritance with possible future review projects.
@@ -45,4 +45,56 @@ class SORT_EVERYTHING {
 
 		SORT_NAME(char *);
 
+		TOTAL_GRADE(int);
+
+	private: //Allowed due to no inheritance, once heritance is required change to protected.
+
+		int students = 100, exams = 20, projects = 20;
+		int ids[students], examGrades[students][exams], projectGrades[students][projects];
+		
+		char LastName[students][12]; //12 Character cap for last name.
+		char FirstName[students][12];
 }
+
+SORT_EVERYTHING::SORT_EVERYTHING(int x, int y, int z){
+	
+	//x is noof students, y is noof projects, z is noof exams.
+	int i, j;
+	output_file_pEP1 << "+ PROGRAM IS BOOTED +" << endl;
+	output_file_pEP1 << "+ OUTPUT FROM SORT_EVERYTHING CONSTRUCTOR + " << endl;
+	if (x < students && x > 0 && y < projects && y > 0 && z < exams && z > 0){
+		
+		for(i=0; i < x; i++){
+			input_file_ids >> ids[x];
+		}
+		for(i=0; i < x; i++){
+			for(j = 0; j < y; j++){	
+				input_file_projects >> grades[i][j];
+			}
+		}
+		for(i = 0; i < x; i++){
+			for(j = 0; j < z; j++){
+				input_file_projects >> grades[i][j];
+			}
+		}
+		for(i = 0; i < x; i++){
+			input_file_names >> LastName[i] >> FirstName[i];
+		}
+	}
+	else {
+		output_file_pEP1 << "+ NOT VALID INPUT" << endl;
+	}
+	output_file_pEP1 << "+ AN OBJECT OF SORT_EVERYTHING IS CREATED +" << endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
