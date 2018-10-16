@@ -59,7 +59,10 @@ class SORT_EVERYTHING {
 SORT_EVERYTHING::SORT_EVERYTHING(int x, int y, int z){
 	
 	//x is noof students, y is noof projects, z is noof exams.
-	int i, j;
+	int i, j, n, p, e;
+	n = x;
+	p = y;
+	e = z;
 	output_file_pEP1 << "+ PROGRAM IS BOOTED +" << endl;
 	output_file_pEP1 << "+ OUTPUT FROM SORT_EVERYTHING CONSTRUCTOR + " << endl;
 	if (x < students && x > 0 && y < projects && y > 0 && z < exams && z > 0){
@@ -88,7 +91,28 @@ SORT_EVERYTHING::SORT_EVERYTHING(int x, int y, int z){
 }
 
 
-
+void
+SORT_EVERYTHING::LIST_ID(int x){
+	//x is the orientation of the print.
+	int i, n;
+	output_file_pEP1 << "+ BOOTED ID PRINTER +" << endl;
+	output_file_pEP1 << "+ OUTPUT FROM LIST_ID METHOD: +" << endl;
+	n = sizeof(ids);
+	cout << n << endl;
+	if(x == 1){
+		for(i = 0; i < 5; i++){
+			output_file_pEP1 << "+ PRINTING IN ORIGINAL ORDER: +" << endl;
+			output_file_pEP1 << "+ " << ids[i] << endl;
+		}
+	}
+	else if (x == -1){
+		for(i = 5 - 1; i >= 0; i--){
+			output_file_pEP1 << "+ PRINTING IN REVERSE ORDER: +" << endl;
+			output_file_pEP1 << "+ " << ids[i] << endl;
+		}
+	}
+	output_file_pEP1 << "+ PRINTER OFF +" << endl;
+}
 
 
 
